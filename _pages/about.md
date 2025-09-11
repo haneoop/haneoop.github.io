@@ -76,59 +76,6 @@ redirect_from:
   gap: 1.5rem;
 }
 
-/* Portfolio card styling for a neat card appearance */
-.portfolio-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.portfolio-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px);
-}
-
-.portfolio-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-}
-
-.portfolio-content {
-  padding: 1.5rem;
-}
-
-.portfolio-content h3 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  color: #333;
-}
-
-.tech-stack {
-  margin-bottom: 1rem;
-}
-
-.tech-tag {
-  display: inline-block;
-  background: #f0f0f0;
-  color: #666;
-  padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-}
-
-.portfolio-content p {
-  margin: 0;
-  color: #666;
-  line-height: 1.5;
-}
-
 /* Small screens: make sidebar flow back into document */
 @media (max-width: 768px) {
   .sidebar {
