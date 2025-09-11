@@ -35,40 +35,6 @@ redirect_from:
 
 
 <style>
-/* Make sidebar fixed under the site header so it doesn't leave a gap above,
-   and keep content aligned to the top alongside it. Adjust --header-top
-   if your header height is different. */
-:root {
-  --sidebar-width: 280px;
-  --sidebar-left: 20px;
-  --header-top: 64px; /* change this to match your header height */
-}
-
-.sidebar {
-  position: fixed;
-  top: var(--header-top);
-  left: var(--sidebar-left);
-  width: var(--sidebar-width);
-  z-index: 1000;
-  display: block !important;
-  box-sizing: border-box;
-}
-
-/* Ensure avatar or other pinned elements don't overflow */
-.sidebar img,
-.sidebar .avatar {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Push the page content to the right and to the same top line */
-.page__content {
-  margin-left: calc(var(--sidebar-width) + var(--sidebar-left) + 12px);
-  margin-top: calc(var(--header-top) - 8px); /* small nudge if needed */
-  box-sizing: border-box;
-}
-
 /* Portfolio grid */
 .portfolio-grid {
   display: grid;
@@ -117,20 +83,5 @@ redirect_from:
   margin: 0;
   color: #666;
   line-height: 1.5;
-}
-
-/* Small screens: make sidebar flow back into document */
-@media (max-width: 768px) {
-  .sidebar {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: 100%;
-    display: block !important;
-  }
-  .page__content {
-    margin-left: 0;
-    margin-top: 0;
-  }
 }
 </style>
