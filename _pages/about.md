@@ -13,7 +13,7 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
 
 ## My Projects
 
-<div class="portfolio-grid">
+<!-- <div class="portfolio-grid">
 {% for post in site.portfolio %}
   <div class="portfolio-card">
     <a href="{{ post.url | relative_url }}" class="portfolio-link">
@@ -31,9 +31,9 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
     </a>
   </div>
 {% endfor %}
-</div>
+</div> -->
 
-<style>
+<!-- <style>
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -98,4 +98,4 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
     gap: 1.5rem;
   }
 }
-</style>
+</style> -->
