@@ -41,3 +41,56 @@
     "vendor/font-awesome/solid",
     "vendor/font-awesome/brands"
 ;
+
+/* page layout: sidebar + main content */
+.page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+/* fix sidebar column width */
+.page-layout .sidebar {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+/* article/page column grows to fill remaining space */
+.page-layout .page {
+  flex: 1 1 auto;
+}
+
+/* ensure the article content uses its normal page__content region */
+.page-layout .page .page__content {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* portfolio grid used on the home/about page */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* minimal card styling so grid looks consistent */
+.portfolio-card {
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 18px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+}
+
+/* responsive: stack sidebar above content for small screens */
+@media (max-width: 768px) {
+  .page-layout {
+    display: block;
+  }
+  .page-layout .sidebar {
+    max-width: none;
+    width: auto;
+  }
+  .page-layout .page {
+    margin-top: 1rem;
+  }
+}
