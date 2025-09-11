@@ -35,37 +35,59 @@ redirect_from:
 
 
 <style>
-/* ensure sidebar is visible and content is pushed right so they don't overlap */
+/* Make sidebar fixed under the site header so it doesn't leave a gap above,
+   and keep content aligned to the top alongside it. Adjust --header-top
+   if your header height is different. */
+:root {
+  --sidebar-width: 280px;
+  --sidebar-left: 20px;
+  --header-top: 64px; /* change this to match your header height */
+}
+
 .sidebar {
+  position: fixed;
+  top: var(--header-top);
+  left: var(--sidebar-left);
+  width: var(--sidebar-width);
+  z-index: 1000;
   display: block !important;
-  position: relative;
-  width: 280px;
-  flex: 0 0 280px;
-  margin-right: 2em;
+  box-sizing: border-box;
 }
 
-/* push the page content to make room for the sidebar */
+/* Ensure avatar or other pinned elements don't overflow */
+.sidebar img,
+.sidebar .avatar {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Push the page content to the right and to the same top line */
 .page__content {
-  margin-left: 320px; /* sidebar width + spacing */
+  margin-left: calc(var(--sidebar-width) + var(--sidebar-left) + 12px);
+  margin-top: calc(var(--header-top) - 8px); /* small nudge if needed */
+  box-sizing: border-box;
 }
 
-/* keep your portfolio grid rules */
+/* Portfolio grid */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
-.portfolio-card { /* ...existing rules... */ }
-.portfolio-link { /* ...existing rules... */ }
-/* other rules kept as before... */
 
-/* mobile: stack and hide sidebar */
+/* Small screens: make sidebar flow back into document */
 @media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    display: block !important;
+  }
   .page__content {
     margin-left: 0;
-  }
-  .sidebar {
-    display: none !important;
+    margin-top: 0;
   }
 }
 </style>
