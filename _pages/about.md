@@ -1,7 +1,9 @@
 ---
 permalink: /
 title: "Software Engineering Portfolio"
+excerpt: "Software Engineering student with experience in full-stack development, machine learning, IoT systems, and mobile app development."
 author_profile: true
+layout: single
 redirect_from: 
   - /about/
   - /about.html
@@ -65,6 +67,7 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
 .portfolio-content h3 {
   margin: 0 0 1rem 0;
   color: #2c3e50;
+  font-size: 1.2rem;
 }
 
 .tech-stack {
@@ -86,5 +89,13 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
   color: #666;
   line-height: 1.5;
   margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 </style>
