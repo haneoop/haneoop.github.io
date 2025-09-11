@@ -6,7 +6,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Muhammad Hanif Bin Shaiful Bhari"
+title                    : "Muhammad Hanif Portfolio"
 title_separator          : "-"
 name                     : &name "Muhammad Hanif Bin Shaiful Bhari"
 description              : &description "Software Engineering Portfolio"
@@ -17,8 +17,7 @@ repository               : "haneoop/haneoop.github.io" # Update with your GitHub
 # Site Author
 author:
   avatar           : "avatar.jpg" # Add your profile image to /images/ folder
-  name             : "Muhammad Hanif"
-  pronouns         : "he/him"
+  name             : "Muhammad Hanif Bin Shaiful Bhari"
   bio              : "Software Engineering Student at Singapore Institute of Technology"
   location         : "Singapore"
   employer         : "SIT Student"

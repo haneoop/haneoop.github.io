@@ -9,6 +9,8 @@ redirect_from:
   - /about.html
 ---
 
+I'm a Software Engineering student at Singapore Institute of Technology with experience in full-stack development, machine learning, IoT systems, and mobile app development.
+
 ## My Projects
 
 <div class="page__content">
