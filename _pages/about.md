@@ -76,6 +76,49 @@ redirect_from:
   gap: 1.5rem;
 }
 
+/* Neater styling for portfolio items */
+.portfolio-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-content h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.tech-stack {
+  margin-bottom: 1rem;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #555;
+  padding: 0.25rem 0.5rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.portfolio-content p {
+  margin: 0;
+  color: #666;
+  line-height: 1.5;
+}
+
 /* Small screens: make sidebar flow back into document */
 @media (max-width: 768px) {
   .sidebar {
