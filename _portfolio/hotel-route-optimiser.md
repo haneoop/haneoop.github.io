@@ -5,8 +5,6 @@ tech_stack: ["Next.js", "React", "Tailwind CSS", "Python", "LTA API", "Route Opt
 collection: portfolio
 ---
 
-# Hotel Route Optimizer - Web App for Transit Planning
-
 ## Overview
 Developed an intelligent web application that revolutionizes hotel pickup route planning by integrating real-time Singapore transit data. The system optimizes transportation efficiency for visitors while considering traffic conditions and costs.
 

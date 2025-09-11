@@ -5,8 +5,6 @@ tech_stack: ["Kotlin", "Java", "Android Studio", "ARCore", "Sceneform", "3D Visu
 collection: portfolio
 ---
 
-# Healthcare AR - Medical Augmented Reality
-
 ## Overview
 Developed an innovative Android AR application that revolutionizes nutrition education by visualizing nutritional data in immersive 3D environments. This project combines cutting-edge augmented reality technology with health education to promote better eating habits.
 

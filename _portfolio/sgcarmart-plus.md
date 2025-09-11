@@ -5,8 +5,6 @@ tech_stack: ["Python", "Flask", "MongoDB", "MySQL", "Docker", "HTML/CSS/JS"]
 collection: portfolio
 ---
 
-# SGCarMart+ - Full-Stack Car Marketplace Web App
-
 ## Overview
 Developed a complete car marketplace platform that connects buyers and sellers with secure transactions, comprehensive listings, and optimized performance. The application demonstrates full-stack development expertise with modern web technologies.
 

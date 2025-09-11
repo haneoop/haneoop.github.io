@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome to my portfolio! I'm a Software Engineering student at Singapore Institute of Technology with experience in full-stack development, machine learning, IoT systems, and mobile app development.
+I'm a Software Engineering student at Singapore Institute of Technology with experience in full-stack development, machine learning, IoT systems, and mobile app development.
 
 ## My Projects
 

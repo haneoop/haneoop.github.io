@@ -1,11 +1,9 @@
 ---
-title: "Automated IoT Aquarium Monitor & Controller"
+title: "Automated IoT Aquarium Monitor & Controller - Raspberry Pi IoT System"
 excerpt: "Comprehensive IoT ecosystem using Raspberry Pi for real-time aquarium monitoring with automated controls and web dashboard."
 tech_stack: ["Python", "Flask", "Raspberry Pi", "MQTT", "IoT", "GPIO"]
 collection: portfolio
 ---
-
-# Automated IoT Aquarium Monitor & Controller - Raspberry Pi IoT System
 
 ## Overview
 Engineered a comprehensive IoT solution that transforms aquarium maintenance through intelligent automation. This multi-device system provides real-time monitoring and automated control for optimal aquatic environment management.

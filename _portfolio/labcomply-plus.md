@@ -5,8 +5,6 @@ tech_stack: ["Python", "Flask", "OpenCV", "YOLO", "SQLite", "Computer Vision"]
 collection: portfolio
 ---
 
-# LabComply+ - Multi-Camera Laboratory Compliance Monitoring
-
 ## Overview
 Developed a sophisticated computer vision system that revolutionizes laboratory safety compliance through intelligent multi-camera monitoring. This production-ready solution provides real-time detection and management of safety violations in laboratory environments.
 

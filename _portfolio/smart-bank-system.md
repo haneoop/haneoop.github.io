@@ -5,8 +5,6 @@ tech_stack: ["Python", "scikit-learn", "XGBoost", "SMOTE", "Streamlit", "Machine
 collection: portfolio
 ---
 
-# Integrated Smart Bank System - ML-Powered Streamlit App
-
 ## Overview
 Built a comprehensive machine learning solution addressing critical challenges in banking risk management through intelligent automation. The system combines multiple ML models to provide real-time insights for financial institutions.
 
