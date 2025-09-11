@@ -9,36 +9,69 @@ redirect_from:
   - /about.html
 ---
 
-I'm a Software Engineering student at Singapore Institute of Technology with experience in full-stack development, machine learning, IoT systems, and mobile app development.
-
 ## My Projects
 
-<!-- <div class="portfolio-grid">
-{% for post in site.portfolio %}
-  <div class="portfolio-card">
-    <a href="{{ post.url | relative_url }}" class="portfolio-link">
-      <div class="portfolio-content">
-        <h3>{{ post.title }}</h3>
-        <div class="tech-stack">
-          {% if post.tech_stack %}
-            {% for tech in post.tech_stack %}
-              <span class="tech-tag">{{ tech }}</span>
-            {% endfor %}
-          {% endif %}
+<div class="page__content">
+  <div class="portfolio-grid">
+  {% for post in site.portfolio %}
+    <div class="portfolio-card">
+      <a href="{{ post.url | relative_url }}" class="portfolio-link">
+        <div class="portfolio-content">
+          <h3>{{ post.title }}</h3>
+          <div class="tech-stack">
+            {% if post.tech_stack %}
+              {% for tech in post.tech_stack %}
+                <span class="tech-tag">{{ tech }}</span>
+              {% endfor %}
+            {% endif %}
+          </div>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
         </div>
-        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
-      </div>
-    </a>
+      </a>
+    </div>
+  {% endfor %}
   </div>
-{% endfor %}
-</div> -->
+</div>
 
-<!-- <style>
+
+<style>
+/* --- Step 1: Create a two-column layout for the main content area --- */
+
+/* * We are targeting the theme's main content wrapper, which holds both
+ * the sidebar and your page content. Applying Flexbox here is key.
+ * The selector #main is a common one, but may be different in your theme.
+ */
+#main {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*
+ * Force the sidebar to be visible and assign it a fixed width.
+ * `flex: 0 0 280px` means it won't grow or shrink and will be 280px wide.
+ */
+.sidebar {
+  display: block !important; /* Override any 'display: none' from the theme */
+  flex: 0 0 280px; /* Adjust width as needed */
+  margin-right: 2em; /* Adds some space between the sidebar and the grid */
+}
+
+/*
+ * This is the theme's container for your page content. We tell it to
+ * take up all the remaining flexible space. Your grid will live inside this.
+ */
+#main .archive {
+  flex-grow: 1;
+}
+
+
+/* --- Step 2: Your existing styles for the portfolio grid --- */
+/* (No changes needed here) */
+
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.5rem; /* Reduced gap slightly for better fit */
 }
 
 .portfolio-card {
@@ -92,10 +125,18 @@ I'm a Software Engineering student at Singapore Institute of Technology with exp
   font-size: 0.95rem;
 }
 
+
+/* --- Step 3: Ensure it looks good on mobile phones --- */
 @media (max-width: 768px) {
+  #main {
+    display: block; /* Stack the content and sidebar on mobile */
+  }
+  .sidebar {
+    display: none !important; /* Hide the sidebar on mobile */
+  }
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
-</style> -->
+</style>
