@@ -42,55 +42,45 @@
     "vendor/font-awesome/brands"
 ;
 
-/* page layout: sidebar + main content */
-.page-layout {
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-}
-
-/* fix sidebar column width */
+/* force sidebar to participate in the flex layout and keep content aligned */
 .page-layout .sidebar {
-  flex: 0 0 280px;
-  max-width: 280px;
-}
-
-/* article/page column grows to fill remaining space */
-.page-layout .page {
-  flex: 1 1 auto;
-}
-
-/* ensure the article content uses its normal page__content region */
-.page-layout .page .page__content {
-  margin: 0;
+  position: static !important;
   box-sizing: border-box;
+  padding-top: 0; /* override any top offset */
 }
 
-/* portfolio grid used on the home/about page */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+/* make sure the article column sits at the top of the flex row */
+.page-layout .page {
+  align-self: flex-start;
 }
 
-/* minimal card styling so grid looks consistent */
-.portfolio-card {
-  background: #ffffff;
-  border-radius: 6px;
-  padding: 18px;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+/* reset avatar / author image positioning that commonly uses absolute/transform */
+.page-layout .sidebar .avatar,
+.page-layout .sidebar .author-avatar,
+.page-layout .sidebar .author__avatar,
+.page-layout .sidebar figure,
+.page-layout .sidebar img {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  transform: none !important;
+  margin: 0 0 1rem 0 !important;
+  display: block !important;
+  max-width: 140px !important; /* adjust as needed */
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 50% !important;
 }
 
-/* responsive: stack sidebar above content for small screens */
+/* if the avatar was absolutely positioned within the sidebar wrapper,
+   ensure it no longer overflows the sidebar area */
+.page-layout .sidebar { overflow: visible; }
+
+/* small screens: keep previous responsive behavior */
 @media (max-width: 768px) {
-  .page-layout {
-    display: block;
-  }
-  .page-layout .sidebar {
-    max-width: none;
-    width: auto;
-  }
-  .page-layout .page {
-    margin-top: 1rem;
+  .page-layout .sidebar .avatar,
+  .page-layout .sidebar img {
+    max-width: 120px !important;
+    margin: 0 auto 1rem;
   }
 }
